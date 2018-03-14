@@ -1,0 +1,28 @@
+{
+  "name": "env-label",
+  "version": "0.1.0",
+  "description": "Show colored labels to help distinguish on which environment your app runs",
+  "main": "dist/main.js",
+  "scripts": {
+    "prepublish": "$(npm bin)/webpack",
+    "build": "$(npm bin)/webpack",
+    "watch": "$(npm bin)/webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ohbarye/env-label.git"
+  },
+  "author": "ohbarye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ohbarye/env-label/issues"
+  },
+  "homepage": "https://github.com/ohbarye/env-label#readme",
+  "devDependencies": {
+    "ts-loader": "^4.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
+}
