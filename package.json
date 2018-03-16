@@ -2,11 +2,11 @@
   "name": "env-label",
   "version": "0.1.0",
   "description": "Show colored labels to help distinguish on which environment your app runs",
-  "main": "dist/main.js",
+  "main": "dist/js/index.js",
   "scripts": {
-    "prepublish": "$(npm bin)/webpack",
-    "build": "$(npm bin)/webpack",
-    "watch": "$(npm bin)/webpack --watch",
+    "prepublish": "yarn build",
+    "build": "rollup -c",
+    "watch": "rollup -cw",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,9 +20,8 @@
   },
   "homepage": "https://github.com/ohbarye/env-label#readme",
   "devDependencies": {
-    "ts-loader": "^4.0.1",
-    "typescript": "^2.7.2",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12"
+    "rollup": "^0.57.0",
+    "rollup-plugin-typescript2": "^0.12.0",
+    "typescript": "^2.7.2"
   }
 }

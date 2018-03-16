@@ -62,28 +62,38 @@ a {
   </span>
 `
 
-const showLabel = (): void => {
-  const template = document.createElement('template');
-  template.innerHTML = templateString.trim();
+export default class EnvLabel {
+  public static init(): void {
+    if (!EnvLabel.isAvailable()) return;
 
-  const a = template.content.querySelector('a');
-  if (a) {
-    a.innerText = window.location.hostname;
+
+    if (document.readyState === 'complete') {
+      EnvLabel.showLabel();
+    } else {
+      document.addEventListener("DOMContentLoaded", EnvLabel.showLabel);
+    }
   }
 
-  const clone = document.importNode(template.content, true);
-  document.body.appendChild(clone);
-};
+  private static isAvailable(): boolean {
+    if (document) {
+      console.log('This environment is out of support.');
+      return;
+    }
 
-export const init = (): void => {
-  if (!('content' in document.createElement('template'))) {
-    console.log('This browser does not support HTML template tag.');
-    return;
+    if (!('content' in document.createElement('template'))) {
+      console.log('This browser does not support HTML template tag.');
+      return;
+    }
   }
 
-  if (document.readyState === 'complete') {
-    showLabel();
-  } else {
-    document.addEventListener("DOMContentLoaded", showLabel);
-  }
-};
+  private static showLabel(): void {
+    const template = document.createElement('template');
+    template.innerHTML = templateString.trim();
+
+    const a = template.content.querySelector('a');
+    if (a) a.innerText = window.location.hostname;
+
+    const clone = document.importNode(template.content, true);
+    document.body.appendChild(clone);
+  };
+}
