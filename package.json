@@ -1,6 +1,6 @@
 {
   "name": "env-label",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Show colored labels to help distinguish on which environment your app runs",
   "main": "dist/js/env-label.js",
   "scripts": {
