@@ -6,6 +6,12 @@ During development, have you operated on your production page that was open at t
 
 ![env](https://user-images.githubusercontent.com/1811616/37533731-0d483946-2986-11e8-9dbb-5ea74d9dc02a.gif)
 
+## How does it work?
+
+- `env-label` just checks a current URL to determine whether it should show a label or not.
+- It uses a regex given at its initialization.
+- If no given condition matches, it never shows a label.
+
 ## Usage
 
 Just install and call `init` method to set up in your code.
@@ -77,7 +83,7 @@ It initializes `EnvLabel` based on `conditions` parameter. The `conditions` shou
 Parameter | Required | Type | Description
 --- | --- | --- | ---
 regex | true | `RegExp` | A regex to test against `window.location.hostname`. If it matches, a label appears.
-labelText | false | `string` | Text that you want to show on a label.
-labelColor | false | `string` | Color of label.
+labelText | false | `string` | Text that you want to show on a label. Its default value will be `window.location.hostname`.
+labelColor | false | `string` | Color of label. Its default value is `#000`.
 
 ![label](https://user-images.githubusercontent.com/1811616/37533819-5adad98e-2986-11e8-853c-3d7042b6f93b.png)
