@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/ohbarye/env-label/issues"
   },
-  "homepage": "https://github.com/ohbarye/env-label#readme",
+  "homepage": "https://github.com/ohbarye/env-label",
   "devDependencies": {
     "rollup": "^0.57.0",
     "rollup-plugin-typescript2": "^0.12.0",
