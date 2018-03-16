@@ -4,7 +4,7 @@ During development, have you operated on your production page that was open at t
 
 *Env Label* will save you from such a mistake.
 
-![image](https://user-images.githubusercontent.com/1811616/37532798-6507d982-2983-11e8-99a5-7099165ae66d.png)
+![env](https://user-images.githubusercontent.com/1811616/37533731-0d483946-2986-11e8-9dbb-5ea74d9dc02a.gif)
 
 ## Usage
 
@@ -28,7 +28,7 @@ import EnvLabel from 'env-label';
 EnvLabel.init({
   conditions: [
     {regex: /localhost/,    labelText: 'development', labelColor: '#00aaaa'},
-    {regex: /example\.com/, labelText: 'edge', labelColor: '#aaaa00'},
+    {regex: /example\.com/, labelText: 'production!!!', labelColor: '#aa0000'},
   ]
 });
 ```
@@ -42,7 +42,7 @@ EnvLabel.init({
     window.EnvLabel.init({
       conditions: [
         {regex: /localhost/,    labelText: 'development', labelColor: '#00aaaa'},
-        {regex: /example\.com/, labelText: 'edge', labelColor: '#aaaa00'},
+        {regex: /example\.com/, labelText: 'production!!!', labelColor: '#aa0000'},
       ]
     });
 </script>
@@ -79,3 +79,5 @@ Parameter | Required | Type | Description
 regex | true | `RegExp` | A regex to test against `window.location.hostname`. If it matches, a label appears.
 labelText | false | `string` | Text that you want to show on a label.
 labelColor | false | `string` | Color of label.
+
+![label](https://user-images.githubusercontent.com/1811616/37533819-5adad98e-2986-11e8-853c-3d7042b6f93b.png)
