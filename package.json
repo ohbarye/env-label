@@ -2,7 +2,7 @@
   "name": "env-label",
   "version": "0.1.0",
   "description": "Show colored labels to help distinguish on which environment your app runs",
-  "main": "dist/js/index.js",
+  "main": "dist/js/env-label.js",
   "scripts": {
     "prepublish": "yarn build",
     "build": "rollup -c",

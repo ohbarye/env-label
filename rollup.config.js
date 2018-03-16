@@ -4,7 +4,7 @@ export default {
   input: './src/ts/index.ts',
   output: [
     {
-      file: 'dist/js/index.js',
+      file: 'dist/js/env-label.js',
       format: 'umd',
       name: 'EnvLabel',
     },
