@@ -1,10 +1,10 @@
 # Env Label
 
-During development, have you operated on your production page that was open at the same time by mistake?
-
-*Env Label* will save you from such a mistake.
+During development, have you operated on your production page that was open at the same time by mistake?**Env Label** will save you from such a mistake.
 
 ![env](https://user-images.githubusercontent.com/1811616/37533731-0d483946-2986-11e8-9dbb-5ea74d9dc02a.gif)
+
+You can see **[demo of env-label on github.io](https://ohbarye.github.io/env-label/test/browser/)**.
 
 ## How does it work?
 

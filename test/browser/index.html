@@ -1,50 +1,60 @@
 <html>
+<head>
 <style>
     body {
-        background: #26acfa;
-        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
     }
-    .dangerous-button-wrapper {
+    .App {
         text-align: center;
     }
-    button.dangerous-button {
-        position: relative;
-        display: inline-block;
-        padding: 4px;
-        text-decoration: none;
-        color: #FFF;
-        background: #fd9535;
-        border-bottom: solid 2px #d27d00;
-        border-radius: 4px;
-        box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
-        font-weight: bold;
+
+    .App-logo {
+        animation: App-logo-spin infinite 10s linear;
+        height: 80px;
+    }
+
+    .App-header {
+        background-color: #222;
+        height: 150px;
+        padding: 20px;
+        color: white;
+    }
+
+    .App-title {
+        font-size: 1.5em;
+    }
+
+    .App-intro {
+        font-size: large;
+    }
+
+    @keyframes App-logo-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
     }
 </style>
 <script type="text/javascript" src="../../dist/js/env-label.js"></script>
 <script type="text/javascript">
-    window.EnvLabel.init({
-      conditions: [
-        {regex: /localhost/,    labelText: 'development', labelColor: '#00aaaa'},
-        {regex: /example\.com/, labelText: 'edge', labelColor: '#aaaa00'},
-      ]
-    });
+  window.EnvLabel.init({
+    conditions: [
+      {regex: /localhost/, labelText: 'development', labelColor: '#00aaaa'},
+      {regex: /ohbarye\.github\.io/, labelText: 'github.io', labelColor: '#aa0000'}
+    ]
+  });
 </script>
-<head></head>
+</head>
 <body>
-    <div>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-    </div>
-    <div class="dangerous-button-wrapper">
-        <button class="dangerous-button">
-            You shouldn't press this button on production. Okay?
-        </button>
-    </div>
+<div class="App">
+    <header class="App-header">
+        <img src='https://avatars3.githubusercontent.com/u/1811616?s=120&v=4' class="App-logo" alt="logo"/>
+        <h1 class="App-title">Env Label</h1>
+    </header>
+    <p class="App-intro">
+        During development, have you operated on your production page that was open at the same time by mistake? Env
+        Label will save you from such a mistake.
+    </p>
+</div>
 </body>
 </html>
